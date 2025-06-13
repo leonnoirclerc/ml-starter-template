@@ -23,3 +23,6 @@ strict = true
 [build-system]
 requires = ["uv"]
 build-backend = "uv.build"
+
+[project.optional-dependencies.dev]
+precommit = ["pre-commit"]
