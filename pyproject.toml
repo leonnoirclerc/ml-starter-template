@@ -2,12 +2,20 @@
 name = "your_project"
 version = "0.1.0"
 description = "A machine learning starter project"
+requires-python = ">=3.11"
+
 dependencies = [
     "numpy",
     "pandas",
     "scikit-learn"
 ]
-requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "mypy",
+    "ruff"
+]
 
 [tool.ruff]
 line-length = 88
@@ -20,9 +28,3 @@ ignore = []
 [tool.mypy]
 strict = true
 
-[build-system]
-requires = ["uv"]
-build-backend = "uv.build"
-
-[project.optional-dependencies.dev]
-precommit = ["pre-commit"]
